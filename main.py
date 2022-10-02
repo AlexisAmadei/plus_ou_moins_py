@@ -11,7 +11,11 @@ while True:
         print("Random max range is set to: " + inp)
         print("----------")
     while found == False:
-        guess = input("What is your guess ?: ")
+        guess = input("What is your guess ? (type 'stop' to give up...): ")
+        if guess == "stop":
+            print("mystery number was " + str(random_number) + ".")
+            print("See ya next time !")
+            exit()
         guess = int(guess)
         if guess == random_number:
             print("You guessed it in " + str(nb_tries) + " times !")
