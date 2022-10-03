@@ -1,9 +1,12 @@
 import random
+import sys
+import os
 
 play_again = True
 
 while True:
     if play_again == True:
+        os.system('cls' if os.name == 'nt' else 'clear')
         found = False
         nb_tries = 1
         inp = input("Enter the max number: ")
@@ -32,8 +35,8 @@ while True:
     if inp == "yes":
         found = False
         play_again = True
-        print("\n")
     elif inp == "no":
+        os.system('cls' if os.name == 'nt' else 'clear')
         break
     else:
         play_again = False
